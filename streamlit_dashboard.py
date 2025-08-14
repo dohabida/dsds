@@ -6,7 +6,17 @@ import plotly.graph_objects as go
 import plotly.express as px
 import streamlit as st
 from plotly.subplots import make_subplots
-from pathlib import Path  # ensure Path is available
+from pathlib import Path
+
+import streamlit as st
+
+try:
+    import plotly.graph_objects as go
+    import plotly.express as px
+except ModuleNotFoundError:
+    st.error("Plotly가 설치되지 않았습니다. `pip install plotly` 또는 `pip install -r requirements.txt` 실행 후 앱을 다시 시작하세요.")
+    st.stop()
+  # ensure Path is available
 
 st.set_page_config(page_title="엑셀 대시보드", layout="wide")
 
