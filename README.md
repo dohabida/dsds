@@ -1,1 +1,5 @@
 # dsds
+streamlit==1.37.1
+plotly==5.23.0
+pandas
+openpyxl
